@@ -1,0 +1,19 @@
+尊敬的合作伙伴，您好，
+感谢您的回复。
+根据您的描述，我了解到在安装.Net Framework 3.5和.Net Framework 4.5时出现此错误，针对这个问题，接下来我们可以选择使用命令行的方式来安装.Net Framework 3.5和.Net Framework 4.5，请按照如下步骤进行操作：
+1. 将Windows Server 2012 R2的ISO文件右键挂载到DVD盘。如果没有ISO文件，可以去网站下载：
+https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2012-r2
+2. 打开资源管理器，会看到一个新添的驱动盘，如下图，可以看见在此计算机上的盘符为H，在您的计算机上可能会有所不同。
+图片
+3.以管理员身份运行命令提示符，输入命令（请按照您计算机上的盘符来替换H）：
+Dism /online /enable-feature /featurename:NetFX3 /All /Source:H:\sources\sxs /LimitAccess
+在安装完成后，建议使用以下文章中的方法来判断目前已经安装好的.Net Framework的版本。
+https://support.microsoft.com/en-sg/help/318785/how-to-determine-which-versions-and-service-pack-levels-of-the-microso
+如果还有安装其他版本的需要，建议同样使用DISM命令进行安装。
+如果有什么不清楚的地方，请随意告知。
+此致，
+Janet Wu 
+微软合作伙伴社区技术支持工程师
+微软全球合作伙伴服务
+-----------------------------------------------------------
+本帖子以”现状”提供且没有任何担保，同时也没有授予任何权利。
